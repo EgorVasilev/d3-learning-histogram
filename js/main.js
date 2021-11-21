@@ -20,8 +20,8 @@ function handleMouseOver(event, data) {
 
     d3.select('.tooltip')
         .html(`${data[0]}<br>$${data[1]} Billion`)
-        .style('top', `${event.pageY + 20}px`)
-        .style('left', `${event.pageX + offset}px`)
+        .style('top', `${event.screenY + offset}px`)
+        .style('left', `${event.screenX + offset}px`)
         .attr('data-date', data[0])
         .classed('hidden', false)
 }
