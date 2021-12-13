@@ -48,8 +48,7 @@ body {
 }
 
 #plot {
-  height: 500px;
-  width: 900px;
+  aspect-ratio: 900 / 500; /* check #plot width/height setter in JS as well if you want to change it */
 }
 
 #plot rect {
@@ -58,4 +57,10 @@ body {
 
 #plot rect:hover {
   fill: lightgrey;
+}
+
+@media all and (prefers-reduced-motion: reduce){
+ .tooltip {
+   transition: none;
+ }
 }
